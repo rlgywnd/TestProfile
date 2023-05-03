@@ -1,5 +1,4 @@
 import * as S from './style';
-import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (

@@ -17,3 +17,4 @@ export const MainBox = styled.div`
   border: 1px solid gray;
   border-radius: 8px;
 `;
+//
