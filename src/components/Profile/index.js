@@ -32,37 +32,49 @@ const Profile = () => {
         <S.NameBox>
           <S.InputDiv>
             <input type='name' placeholder='name' {...register('name')} />
-            <div
-              onClick={() => {
-                setValue('name', '');
-              }}
-            >
-              <BsEraser color='black' />
-            </div>
+            {watch('name') ? (
+              <div
+                onClick={() => {
+                  setValue('name', '');
+                }}
+              >
+                <BsEraser color='black' />
+              </div>
+            ) : (
+              <></>
+            )}
           </S.InputDiv>
         </S.NameBox>
         <S.AgeBox>
           <S.InputDiv>
             <input type='age' placeholder='age' {...register('age')} />
-            <div
-              onClick={() => {
-                setValue('age', '');
-              }}
-            >
-              <BsEraser color='black' />
-            </div>
+            {watch('age') ? (
+              <div
+                onClick={() => {
+                  setValue('age', '');
+                }}
+              >
+                <BsEraser color='black' />
+              </div>
+            ) : (
+              <></>
+            )}
           </S.InputDiv>
         </S.AgeBox>
         <S.PhoneBox>
           <S.InputDiv>
             <input type='phone' placeholder='phone' {...register('phone')} />
-            <div
-              onClick={() => {
-                setValue('phone', '');
-              }}
-            >
-              <BsEraser color='black' />
-            </div>
+            {watch('phone') ? (
+              <div
+                onClick={() => {
+                  setValue('phone', '');
+                }}
+              >
+                <BsEraser color='black' />
+              </div>
+            ) : (
+              <></>
+            )}
           </S.InputDiv>
         </S.PhoneBox>
         <S.BtnDiv type='submit'>등록</S.BtnDiv>

@@ -26,7 +26,7 @@ export const PhoneBox = styled.div`
 
 export const InputDiv = styled.div`
   display: flex;
-  padding: 0 15px 0 10px;
+  padding: 0 10px 0 10px;
   justify-content: space-between;
   align-items: center;
   border: 1px solid black;
@@ -41,7 +41,26 @@ export const InputDiv = styled.div`
     }
   }
   div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    width: 25px;
+    height: 25px;
+    /* width: 0;
+    max-height: 0; */
+    /* border: 1px solid red; */
+    border-radius: 50px;
     cursor: pointer;
+    :active {
+      transition: all 0.2s linear;
+      background-color: #d6d9dc;
+      width: 25px;
+      max-height: 50px;
+    }
+    :not(:active) {
+      transition: all 0.2s linear;
+    }
   }
 `;
 export const BtnDiv = styled.button`
@@ -66,6 +85,10 @@ export const BtnDiv = styled.button`
 export const RefreshDiv = styled.div`
   margin-bottom: 30px;
   cursor: pointer;
+  :active {
+    transition: transform 0.3s linear;
+    transform: rotate(-360deg);
+  }
 `;
 
 export const ResultDiv = styled.div`
